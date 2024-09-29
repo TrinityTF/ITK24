@@ -11,7 +11,7 @@ r = float(input("Sisesta silindri raadius: "))
 #h = float(f"{random.uniform(0, 10):.3f}") # Ümardamine
 #print(f"Kõrgus: {h}") # Kõrgus
 
-h = int(random.uniform(0, 10) * 1000) / 1000 # Arvutamine
+h = int(random.uniform(1, 10) * 1000) / 1000 # Arvutamine
 #print(f"Kõrgus: {h}") # Kõrgus
 
 v = pi * r**2 * h 
