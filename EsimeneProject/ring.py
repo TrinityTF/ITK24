@@ -10,7 +10,7 @@ import math
 
 ringD = float(input("Ringi diameeter: min 1, max 10)....")) # Diameeter
 if 1 < ringD <= 10:
-    print("Õige diameeter")
+    #print("Õige diameeter") #Debug kood
     ringR = ringD / 2 # Radius
     print(f"Ringi raadius: {ringR}")
     ringC = 2 * math.pi * ringR # Ümbermõõt
@@ -19,5 +19,5 @@ if 1 < ringD <= 10:
     print(f"Ringi pindala: {ringS}")
     print(f"Ringi diameeter: {ringD}")
 else   :
-    print("Vale diameeter")
+    #print("Vale diameeter") # Debug kood
 
