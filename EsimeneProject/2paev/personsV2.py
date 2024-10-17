@@ -30,11 +30,12 @@ def stripAccents(s):
                   if unicodedata.category(c) != 'Mn')
 #print(stripAccents("õun Ämblik Mõõk ÄÕ ÕÜ ÜÖ ÖÄ"))
 
-# Dünaamiline päis
 
+
+# Dünaamiline päis
 oldHeaderParts = open(src, "r", encoding="utf-8").readline().strip().split(";")[:4]
 header = ";".join(oldHeaderParts + newHeader)
-print(header)
+#print(header)
 
 f = open(src,"r", encoding="utf-8") # Faili lugemine
 d = open(dst, "w", encoding="utf-8") # Faili kirjutamine
