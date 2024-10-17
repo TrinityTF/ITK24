@@ -1,4 +1,4 @@
-<sup>ITK24 Programeerimese alused</sup>
+**ITK24 Programeerimese alused**
 
 [Kodused Ülesanded](https://github.com/TrinityTF/ITK24/tree/main/py%C3%9Clesanded)
 
