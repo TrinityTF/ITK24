@@ -1,0 +1,33 @@
+Matis;28;2
+Elvis;69;25
+Anastasija;89;3
+Toivo;36;28
+Brigitta;77;13
+Reivo;43;19
+Kadri-Ann;60;28
+Elar;74;18
+Aap;60;10
+Age;61;1
+Nelli;12;3
+Merle;82;1
+Maria;48;14
+Rodion;92;17
+Kristopher;2;21
+Innar;66;22
+Avely;71;19
+Fjodor;95;12
+Alari;78;29
+Gendra;94;17
+Gertrud;8;27
+Carolin;33;14
+Mathias;8;28
+Krete;50;5
+Jan Markus;37;21
+Alla;37;9
+Reiko;57;27
+Ivika;49;26
+Ingrid;80;30
+Evelyn;46;2
+Aare;38;19
+Elise;56;7
+Karl Oskar;64;28
