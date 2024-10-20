@@ -2,8 +2,8 @@
 ### 📂 Kodused Ülesanded
 - 📄 [`geomeetrilineKujund.py`](pyÜlesanded/geomeetrilineKujund.py)
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
-  - 📄 [`Eesnimed.csv`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas/Eesnimed.csv)
-  - 📄 [`result.txt`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas/result.txt)
+  - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
+  - 📄 [`result.txt`](pyÜlesanded/result.txt)
 
 ### 📂 EsimeneProject
 #### 📂 Esimene Päev
