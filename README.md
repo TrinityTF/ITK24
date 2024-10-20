@@ -1,3 +1,4 @@
+```bash
 📂 ITK 24
 ├── 📂 Kodused Ülesanded
 │   ├── 📄 geomeetrilineKujund.py
@@ -32,3 +33,4 @@
 ├── 📄 LICENSE
 ├── 📄 README.md
 └── 📄 .gitignore
+```
