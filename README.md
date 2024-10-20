@@ -1,7 +1,7 @@
-
+```bash
 📂 ITK 24
 ├── 📂 Kodused Ülesanded
-│   ├── 📄 geomeetrilineKujund.py
+│   ├── 📄 [geomeetrilineKujund.py](pyÜlesanded/geomeetrilineKujund.py)
 │   └── 📄 juhuslikEdetabel_AguToomasPihelgas.py
 │       ├── 📄 Eesnimed.csv
 │       └── 📄 result.txt
