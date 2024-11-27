@@ -35,9 +35,9 @@
 
 ### 📂 Objectid Project
 #### 📂 Kolmas Päev
-- 📄 [`Circle.py`](Objectid/Kolmas%20Päev/Circle.py)
-- 📄 [`Rectangle.py`](Objectid/Kolmas%20Päev/Rectangle.py)
-- 📄 [`app.py`](Objectid/Kolmas%20Päev/app.py)
+- 📄 [`Circle.py`](Objectid/Circle.py)
+- 📄 [`Rectangle.py`](Objectid/Rectangle.py)
+- 📄 [`app.py`](Objectid/app.py)
 
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
