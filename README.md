@@ -33,7 +33,7 @@
 - 📄 [`searchInPersonV2.py`](EsimeneProject/2paev/searchInPersonV2.py)
 - 📄 [`task.py`](EsimeneProject/2paev/task.py)
 
-### 📂 Objectid Project
+### 📂 Objectid
 #### 📂 Kolmas Päev
 - 📄 [`Circle.py`](Objectid/Circle.py)
 - 📄 [`Rectangle.py`](Objectid/Rectangle.py)
