@@ -90,3 +90,6 @@ Marili;74;22
 Anonymous;31;1
 Anonymous;64;2
 Agu;19;3
+agu;37;1
+agu;30;1
+agu;20;2
