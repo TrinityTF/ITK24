@@ -39,7 +39,8 @@
 - 📄 [`app.py`](Objectid/app.py)
 
 ### 📂 Arva Ära (Mäng)
-
+- 📄 [`Model.py`](arvaAra/Model.py)
+- 📄 [`app.py`](arvaAra/app.py)
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
 - 📄 [`README.md`](README.md)  
