@@ -45,8 +45,8 @@
 - 📄 [`Leaderboard.py`](arvaAra/Leaderboard.py)
 
 ### 📂 Isikud
-- 📄 [`main.py`](isikud/main.py)
-- 📄 [`Person.py`](isikud/Person.py)
+- 📄 [`main.py`](Isikud/main.py)
+- 📄 [`Person.py`](Isikud/Person.py)
     
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
