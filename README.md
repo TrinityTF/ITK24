@@ -41,6 +41,8 @@
 ### 📂 Arva Ära (Mäng)
 - 📄 [`Model.py`](arvaAra/Model.py)
 - 📄 [`app.py`](arvaAra/app.py)
+  - 📄 [`result.py`](arvaAra/result.py)
+    
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
 - 📄 [`README.md`](README.md)  
