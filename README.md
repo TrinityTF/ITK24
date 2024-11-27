@@ -1,4 +1,5 @@
 # ITK 24 Programmeerimise alused 
+
 ### 📂 Kodused Ülesanded
 - 📄 [`geomeetrilineKujund.py`](pyÜlesanded/geomeetrilineKujund.py)
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
@@ -34,6 +35,9 @@
 
 ### 📂 Objectid Project
 #### 📂 Kolmas Päev
+- 📄 [`Circle.py`](Objectid/Kolmas%20Päev/Circle.py)
+- 📄 [`Rectangle.py`](Objectid/Kolmas%20Päev/Rectangle.py)
+- 📄 [`app.py`](Objectid/Kolmas%20Päev/app.py)
 
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
@@ -51,6 +55,9 @@ See repo sisaldab erinevaid ülesandeid ja projekte, mis on lõpetatud ITK24 kur
 
 ### EsimeneProject
 - Sisaldab esimese 2 päeva Python'i skripte ja muid tunnis kasutusse läinud faile.
+
+### Objectid Project
+- Sisaldab Python'i skripte, mis on seotud objektide ja klasside loomisega Pythonis.
 
 > *<sup>Agu Toomas Pihelgas 2024</sup>*
 
