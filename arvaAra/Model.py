@@ -1,5 +1,7 @@
 import random
 
+from Leaderboard import Leaderboard
+
 
 class Model:
 
@@ -7,6 +9,7 @@ class Model:
     pc_nr = 0
     steps = 0
     gameOver = False
+    cheater = False
 
     def __init__(self):
         self.gameReset()
@@ -16,6 +19,7 @@ class Model:
         self.pc_nr = random.randint(1, 100)
         self.steps = 0
         self.gameOver = False
+        self.cheater = False
 
     def ask(self):
         user = int(input("Sisesta number: "))
@@ -24,6 +28,7 @@ class Model:
         if user == 1000:
             print(f"Leidsid nõrga koha. Õige number on {self.pc_nr}.")
             self.gameOver = True
+            self.cheater = True
         elif user > self.pc_nr:
             print("Väiksem")
         elif user < self.pc_nr:
@@ -35,9 +40,9 @@ class Model:
     def letsPlay(self): # Küsib numbrit kuni mäng läbi
         while not self.gameOver:
             self.ask()
-
-        name = self.askName()
-        self.addNameToFile(name)
+        if not self.cheater:
+            name = self.askName()
+            self.addNameToFile(name)
 
         if self.playAgain():
             self.gameReset()
@@ -60,4 +65,21 @@ class Model:
             return True
         return False
 
+    def getData(self):
+        data = []
+        with open(self.filename, "r", encoding="utf-8") as file:
+            contents = file.readlines()
+            for line in contents:
+                name, number, steps = line.strip().split(";")
+                #print(name, number, steps)
+                number = int(number)
+                steps = int(steps)
+                if steps <= 10:
+                    data.append(Leaderboard(name, number, steps))
+        sortedData = sorted(data, key=lambda x: x.steps)
+        return sortedData
 
+    def showLeaderboard(self, data):
+        if data:
+            for user in data:
+                print(user)
