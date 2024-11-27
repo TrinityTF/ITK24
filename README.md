@@ -43,6 +43,10 @@
 - 📄 [`app.py`](arvaAra/app.py)
   - 📄 [`result.py`](arvaAra/result.py)
 - 📄 [`Leaderboard.py`](arvaAra/Leaderboard.py)
+
+### 📂 Isikud
+- 📄 [`main.py`](isikud/main.py)
+- 📄 [`Person.py`](isikud/Person.py)
     
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
