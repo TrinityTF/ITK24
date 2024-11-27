@@ -19,3 +19,7 @@ class Person:
             today = datetime.date.today()
             return today.year - self.birth.year - ((today.month, today.day) < (self.birth.month, self.birth.day))
         return None
+
+    def __str__(self):
+        # Väljasta kogu info isiku kohta
+        return f"{self.name} {self.gender} {self.birth} {self.calculate_age()}"
