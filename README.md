@@ -42,6 +42,7 @@
 - 📄 [`Model.py`](arvaAra/Model.py)
 - 📄 [`app.py`](arvaAra/app.py)
   - 📄 [`result.py`](arvaAra/result.py)
+- 📄 [`Leaderboard.py`](arvaAra/Leaderboard.py)
     
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
