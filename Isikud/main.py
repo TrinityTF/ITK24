@@ -11,7 +11,7 @@ if __name__ == '__main__':
     print(marko)
     print(anonymous)
 
-    print("_______________")
+    print("_____________________________________")
 
     names = ["Heli Kopter","Jaana Lind", "Zoonja Puhur", "Niina Sarvik", "Maksim Market"]
     genders = ["N","N","","N","M"]
@@ -25,8 +25,7 @@ if __name__ == '__main__':
     # Uus list
     persons = []
     for name, gender, date in zip(names, genders, dates):
-        person = Person(name, gender, date)
-        persons.append(person)
+        persons.append(Person(name, gender, date))
 
     # Print for loop
     for person in persons:
