@@ -11,7 +11,10 @@ class Model:
         userNum = int(input("Sisesta number: "))
         self.steps += 1 # +1
 
-        if userNum > self.pc_nr:
+        if userNum == 1000:
+            print(f"Leidsid nõrga koha. Õige number on {self.pc_nr}.")
+            self.gameOver = True
+        elif userNum > self.pc_nr:
             print("Väiksem")
         elif userNum < self.pc_nr:
             print("Suurem")
