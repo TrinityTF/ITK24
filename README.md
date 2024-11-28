@@ -51,6 +51,12 @@
 ### 📂 SimpleGUI
 - 📄 [`app.py`](SimpleGUI/app.py)
 
+### 📂 TaskGui
+- 📄 [`app.py`](TaskGui/app.py)
+- 📄 [`TaskGUI.py`](TaskGui/taskGUI.py)
+- 📄 [`Circle.py`](TaskGui/Circle.py)
+- 📄 [`Rectangle.py`](TaskGui/Rectangle.py)
+
 
 
 ### 📄 Muud Failid
