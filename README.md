@@ -47,7 +47,12 @@
 ### 📂 Isikud
 - 📄 [`main.py`](Isikud/main.py)
 - 📄 [`Person.py`](Isikud/Person.py)
-    
+
+### 📂 SimpleGUI
+- 📄 [`app.py`](SimpleGUI/app.py)
+
+
+
 ### 📄 Muud Failid
 - 📄 [`LICENSE`](LICENSE)  
 - 📄 [`README.md`](README.md)  
