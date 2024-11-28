@@ -52,10 +52,10 @@
 - 📄 [`app.py`](SimpleGUI/app.py)
 
 ### 📂 TaskGui
-- 📄 [`app.py`](TaskGui/app.py)
-- 📄 [`TaskGUI.py`](TaskGui/taskGUI.py)
-- 📄 [`Circle.py`](TaskGui/Circle.py)
-- 📄 [`Rectangle.py`](TaskGui/Rectangle.py)
+- 📄 [`app.py`](taskGui/app.py)
+- 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
+- 📄 [`Circle.py`](taskGui/Circle.py)
+- 📄 [`Rectangle.py`](taskGui/Rectangle.py)
 
 
 
