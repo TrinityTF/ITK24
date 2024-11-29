@@ -16,5 +16,5 @@ class Rectangle:
         return math.sqrt(self.width ** 2 + self.height ** 2)
 
     def __repr__(self):
-        return (f"Laius: {self.width}, Kõrgus: {self.height}, "
-                f"Ümbermõõt:{self.area()}, Pindala: {self.perimeter()}")
+        return (f"Laius: {self.width}\nKõrgus: {self.height}\n"
+                f"Ümbermõõt:{self.area()}\nPindala: {self.perimeter()}")

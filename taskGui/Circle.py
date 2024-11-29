@@ -14,4 +14,5 @@ class Circle:
         return 2 * math.pi * self.radius
 
     def __str__(self):
-        return f"Raadius: {self.radius}, Diameetr: {self.diameter()}, Area: {self.area()}"
+        return (f"Raadius: {self.radius}\nDiameetr: {self.diameter()}\n"
+                f"Pindala: {self.area()}\nÜmbermõõt {self.circumference()}")
