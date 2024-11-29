@@ -1,9 +1,9 @@
-
 from tkinter import Frame, Text, Button, Label, Entry, messagebox
 from tkinter.ttk import Combobox
 
 from Circle import Circle
 from Rectangle import Rectangle
+from Cone import Cone
 
 
 class TaskGUI:
@@ -17,15 +17,15 @@ class TaskGUI:
         self.frame.pack(fill="both", expand=True)
 
         # Create Combobox
-        self.cmb= Combobox(self.frame, values=("Vali kujund", "Ring", "Ristkülik"))
+        self.cmb= Combobox(self.frame, values=("Vali kujund", "Ring", "Ristkülik", "Koonus", "Silinder", "Täisnurkne kolmnurk"))
         self.cmb.current(0) # vali kujund
         self.cmb["state"] = "readonly"
         self.cmb.grid(row=0, column=0,padx=5, pady=5, columnspan=2,sticky="ew")
 
-        # Create Ujuvad Vidiniad (Ring, Ristkülik)
-
+        # "Ujuvad" Vidinad
         self.lblCircle, self.txtCircle = self.createCircleWidget()
         self.lblA, self.lblB, self.txtA, self.txtB = self.createRectangleWidget()
+        self.lblConeR, self.lblConeH, self.txtConeR, self.txtConeH = self.createConeWidget()
 
         # Create button
         self.btnSubmit = self.createButton()
@@ -33,9 +33,10 @@ class TaskGUI:
         # Create result Text
         self.result = self.createResult()
 
-        # Peidame Ringi ja Ristküliku "asjad"
+        # Peidame kujundidte "asjad"
         self.forgetCircle()
         self.forgetRectangle()
+        self.forgetCone()
 
         # Kuula Comboboxi muutusi
         self.cmb.bind("<<ComboboxSelected>>", self.changed)
@@ -78,10 +79,26 @@ class TaskGUI:
 
         textB = Entry(self.frame, width=12)
         textB.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
-
-
+        
         return labelA, labelB, textA, textB
-
+    
+    def createConeWidget(self):
+        labelR = Label(self.frame, text="Raadius")
+        labelR.grid(row=1, column=0, padx=5, pady=5, sticky="ew")
+        
+        textR = Entry(self.frame, width=12)
+        textR.focus()
+        textR.grid(row=1, column=1, padx=5, pady=5, sticky="ew")
+        
+        labelH = Label(self.frame, text="Raadius")
+        labelH.grid(row=2, column=0, padx=5, pady=5, sticky="ew")
+        
+        textH = Entry(self.frame, width=12)
+        textH.focus()
+        textH.grid(row=2, column=1, padx=5, pady=5, sticky="ew")
+        
+        return labelR, labelH, textR, textH
+        
     def forgetCircle(self):
         self.lblCircle.grid_forget()
         self.txtCircle.grid_forget()
@@ -93,10 +110,17 @@ class TaskGUI:
         self.txtA.grid_forget()
         self.txtB.grid_forget()
         self.btnSubmit["state"] = "disabled"
+        
+    def forgetCone(self):
+        self.lblConeR.grid_forget()
+        self.lblConeH.grid_forget()
+        self.txtConeR.grid_forget()
+        self.txtConeH.grid_forget()
+        self.btnSubmit["state"] = "disabled"
 
     def changed(self, event=None):
         comboIndex = self.cmb.current()
-        print(comboIndex)
+        #print(comboIndex)
         if comboIndex == 0:
             self.forgetCircle()
             self.forgetRectangle()
@@ -110,6 +134,11 @@ class TaskGUI:
         elif comboIndex == 2:
             self.lblA, self.lblB, self.txtA, self.txtB = self.createRectangleWidget()
             self.forgetCircle()
+            self.btnSubmit["state"] = "normal"
+            
+        elif comboIndex == 3:
+            self.lblConeR, self.lblConeR, self.txtConeR, self.txtConeH = self.createConeWidget()
+            self.forgetCone()
             self.btnSubmit["state"] = "normal"
 
         self.clearResult()
@@ -148,6 +177,19 @@ class TaskGUI:
 
             except ValueError:
                 messagebox.showerror("Viga", "Küljed peavad olema numbrid.")
+                
+        elif cmbIndex == 3:
+            try:
+                r = float(self.txtConeR.get().strip())
+                h = float(self.txtConeH.get().strip())
+                cone = Cone(r, h)
+                self.clearResult()
+                self.result.config(state="normal")
+                self.result.insert("1.0", str(cone))
+                self.result.config(state="disabled")
+                
+            except ValueError:
+                messagebox.showerror("Viga", "Raadius ja kõrgus peavad olema numbrid.")
 
             self.txtA.delete(0, "end")
             self.txtB.delete(0, "end")
