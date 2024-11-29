@@ -7,6 +7,13 @@
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
+  - 
+📂 Lisa kujund olemasolevale tööle
+- 📄 [`app.py`](pyÜlesanded/LKOT/app.py)
+- 📄 [`TaskGUI.py`](pyÜlesanded/LKOT/taskGUI.py)
+- 📄 [`Circle.py`](pyÜlesanded/LKOT/Circle.py)
+- 📄 [`Rectangle.py`](pyÜlesanded/LKOT/Rectangle.py)
+
 
 </details>
 <details>
