@@ -1,12 +1,12 @@
 # ITK 24 Programmeerimise alused 
 
-<summary>### 📂 Kodused Ülesanded</summary>
+### 📂 Kodused Ülesanded
 - 📄 [`geomeetrilineKujund.py`](pyÜlesanded/geomeetrilineKujund.py)
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
 
-<summary>### 📂 EsimeneProject</summary>
+### 📂 EsimeneProject
 #### 📂 Esimene Päev
 - 📄 [`esimene.py`](EsimeneProject/1paev/esimene.py)
 - 📄 [`importid.py`](EsimeneProject/1paev/importid.py)
