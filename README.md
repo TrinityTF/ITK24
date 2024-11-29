@@ -1,21 +1,30 @@
 # ITK 24 Programmeerimise alused 
+### 📂 Kodused Ülesanded
 <details>
-<summary>### 📂 Kodused Ülesanded</summary>
+<summary>📂 Kodused Ülesanded</summary>
+
 - 📄 [`geomeetrilineKujund.py`](pyÜlesanded/geomeetrilineKujund.py)
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
 
 </details>
+
 ### 📂 EsimeneProject
-#### 📂 Esimene Päev
+<details>
+<summary>📂 Esimene Päev</summary>
+
 - 📄 [`esimene.py`](EsimeneProject/1paev/esimene.py)
 - 📄 [`importid.py`](EsimeneProject/1paev/importid.py)
 - 📄 [`kordused.py`](EsimeneProject/1paev/kordused.py)
 - 📄 [`listid.py`](EsimeneProject/1paev/listid.py)
 - 📄 [`ring.py`](EsimeneProject/1paev/ring.py)
 
-#### 📂 Teine Päev
+</details>
+
+<details>
+<summary>📂 Teine Päev</summary>
+
 - 📄 [`Create-MyCSV-s.csv`](EsimeneProject/2paev/Create-MyCSV-s.csv)
 - 📄 [`Create-MyCSV-v.csv`](EsimeneProject/2paev/Create-MyCSV-v.csv)
 - 📄 [`CreateCSV.txt`](EsimeneProject/2paev/CreateCSV.txt)
@@ -34,36 +43,66 @@
 - 📄 [`searchInPersonV2.py`](EsimeneProject/2paev/searchInPersonV2.py)
 - 📄 [`task.py`](EsimeneProject/2paev/task.py)
 
+</details>
+
 ### 📂 Objectid
+<details>
+<summary>📂 Objectid</summary>
+
 - 📄 [`Circle.py`](Objectid/Circle.py)
 - 📄 [`Rectangle.py`](Objectid/Rectangle.py)
 - 📄 [`app.py`](Objectid/app.py)
 
+</details>
+
 ### 📂 Arva Ära (Mäng)
+<details>
+<summary>📂 Arva Ära (Mäng)</summary>
+
 - 📄 [`Model.py`](arvaAra/Model.py)
 - 📄 [`app.py`](arvaAra/app.py)
   - 📄 [`result.py`](arvaAra/result.py)
 - 📄 [`Leaderboard.py`](arvaAra/Leaderboard.py)
 
+</details>
+
 ### 📂 Isikud
+<details>
+<summary>📂 Isikud</summary>
+
 - 📄 [`main.py`](Isikud/main.py)
 - 📄 [`Person.py`](Isikud/Person.py)
 
+</details>
+
 ### 📂 SimpleGUI
+<details>
+<summary>📂 SimpleGUI</summary>
+
 - 📄 [`app.py`](SimpleGUI/app.py)
 
+</details>
+
 ### 📂 TaskGui
+<details>
+<summary>📂 TaskGui</summary>
+
 - 📄 [`app.py`](taskGui/app.py)
 - 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
 - 📄 [`Circle.py`](taskGui/Circle.py)
 - 📄 [`Rectangle.py`](taskGui/Rectangle.py)
 
-
+</details>
 
 ### 📄 Muud Failid
+<details>
+<summary>📂 Muud Failid</summary>
+
 - 📄 [`LICENSE`](LICENSE)  
 - 📄 [`README.md`](README.md)  
 - 📄 [`gitignore`](.gitignore)
+
+</details>
 
 ---
 
@@ -82,5 +121,4 @@ See repo sisaldab erinevaid ülesandeid ja projekte, mis on lõpetatud ITK24 kur
 
 > *<sup>Agu Toomas Pihelgas 2024</sup>*
 
----
 
