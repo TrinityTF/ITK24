@@ -1,5 +1,5 @@
 # ITK 24 Programmeerimise alused 
-### 📂 Kodused Ülesanded
+
 <details>
 <summary>📂 Kodused Ülesanded</summary>
 
