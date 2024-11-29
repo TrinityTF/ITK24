@@ -43,7 +43,6 @@
 
 </details>
 
-### 📂 Objectid
 <details>
 <summary>📂 Objectid</summary>
 
@@ -53,7 +52,6 @@
 
 </details>
 
-### 📂 Arva Ära (Mäng)
 <details>
 <summary>📂 Arva Ära (Mäng)</summary>
 
@@ -64,7 +62,6 @@
 
 </details>
 
-### 📂 Isikud
 <details>
 <summary>📂 Isikud</summary>
 
@@ -73,7 +70,6 @@
 
 </details>
 
-### 📂 SimpleGUI
 <details>
 <summary>📂 SimpleGUI</summary>
 
@@ -81,7 +77,6 @@
 
 </details>
 
-### 📂 TaskGui
 <details>
 <summary>📂 TaskGui</summary>
 
@@ -92,7 +87,6 @@
 
 </details>
 
-### 📄 Muud Failid
 <details>
 <summary>📂 Muud Failid</summary>
 
