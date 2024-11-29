@@ -9,10 +9,10 @@
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
 
 </details>
-
-### 📂 EsimeneProject
 <details>
-<summary>📂 Esimene Päev</summary>
+<summary>📂 EsimeneProject</summary>
+
+📂 Esimene Päev
 
 - 📄 [`esimene.py`](EsimeneProject/1paev/esimene.py)
 - 📄 [`importid.py`](EsimeneProject/1paev/importid.py)
@@ -20,10 +20,8 @@
 - 📄 [`listid.py`](EsimeneProject/1paev/listid.py)
 - 📄 [`ring.py`](EsimeneProject/1paev/ring.py)
 
-</details>
 
-<details>
-<summary>📂 Teine Päev</summary>
+📂 Teine Päev
 
 - 📄 [`Create-MyCSV-s.csv`](EsimeneProject/2paev/Create-MyCSV-s.csv)
 - 📄 [`Create-MyCSV-v.csv`](EsimeneProject/2paev/Create-MyCSV-v.csv)
