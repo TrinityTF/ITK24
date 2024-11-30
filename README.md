@@ -1,16 +1,19 @@
 # ITK 24 Programmeerimise alused 
 ### 📂 Kodused Ülesanded
+
 <details>
 <summary>📂 Geomeetriline Kujund</summary>
 
 - 📄 [`geomeetrilineKujund.py`](pyÜlesanded/geomeetrilineKujund.py)
 </details>
+
 <details>
 <summary>📂 Juhuslik Edetabel</summary>
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
 </details>
+
 <details>
 <summary>📂 Kujundite Lisamine Olemasolevasse Tõõle</summary>
 
@@ -22,7 +25,9 @@
 - 📄 [`Cylinder.py`](taskGui/Cylinder.py)
 - 📄 [`Triangle.py`](taskGui/Triangle.py)
 </details>
-## 📂 Tunnis Tehtud Pythoni Projectid
+
+### 📂 Tunnis Tehtud Pythoni Projectid
+
 <details>
 <summary>📂 EsimeneProject</summary>
 
