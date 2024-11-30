@@ -15,7 +15,7 @@
 </details>
 
 <details>
-<summary>📂 Kujundite Lisamine Olemasolevasse Tõõle</summary>
+<summary>📂 Kujundite Lisamine Olemasolevale Tõõle</summary>
 
 - 📄 [`app.py`](taskGui/app.py)
 - 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
