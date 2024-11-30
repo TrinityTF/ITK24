@@ -7,7 +7,7 @@
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
-  - 
+ 
 📂 Lisa kujund olemasolevale tööle
 - 📄 [`app.py`](taskGui/app.py)
 - 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
@@ -16,7 +16,6 @@
 - 📄 [`Cone.py`](taskGui/Cone.py)
 - 📄 [`Cylinder.py`](taskGui/Cylinder.py)
 - 📄 [`Triangle.py`](taskGui/Triangle.py)
-
 
 </details>
 <details>
