@@ -19,7 +19,7 @@
 </details>
 
 <details>
-<summary>📂 Kujundite Lisamine Olemasolevale Tööle</summary>
+<summary>📂 [**Kujundite Lisamine Olemasolevale Tööle**](https://github.com/TrinityTF/ITK24/tree/TaskGui)</summary>
 
 - 📄 [**app.py**](taskGui/app.py)  
 - 📄 [**TaskGUI.py**](taskGui/TaskGUI.py)  
