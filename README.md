@@ -1,5 +1,4 @@
-<details>
-<summary>📂 Kujundite Lisamine Olemasolevale Tööle</summary>
+# 📂 Kujundite Lisamine Olemasolevale Tööle</summary>
 
 - 📄 [**app.py**](taskGui/app.py)  
 - 📄 [**TaskGUI.py**](taskGui/TaskGUI.py)  
@@ -9,8 +8,7 @@
 - 📄 [**Cylinder.py**](taskGui/Cylinder.py)  
 - 📄 [**Triangle.py**](taskGui/Triangle.py)
 
-</details>
-
+### [**Tagasi main branchi**](https://github.com/TrinityTF/ITK24/tree/main)
 ---
 
 <sup>**Agu Toomas Pihelgas 2024**</sup>
