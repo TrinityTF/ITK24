@@ -8,7 +8,7 @@
 </details>
 
 <details>
-<summary>📂 Juhuslik Edetabel</summary>
+<summary>📂 Juhuslik Edetabel </summary>
 - 📄 [`juhuslikEdetabel_AguToomasPihelgas.py`](pyÜlesanded/juhuslikEdetabel_AguToomasPihelgas.py)
   - 📄 [`Eesnimed.csv`](pyÜlesanded/Eesnimed.csv)
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
