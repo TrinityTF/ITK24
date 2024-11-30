@@ -9,6 +9,7 @@
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
  
 📂 Lisa kujund olemasolevale tööle
+
 - 📄 [`app.py`](taskGui/app.py)
 - 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
 - 📄 [`Circle.py`](taskGui/Circle.py)
