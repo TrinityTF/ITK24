@@ -105,22 +105,6 @@
 - 📄 [`gitignore`](.gitignore)
 
 </details>
-
----
-
-## Projekti Ülevaade
-
-See repo sisaldab erinevaid ülesandeid ja projekte, mis on lõpetatud ITK24 kursuse raames. Iga projekt on korraldatud eraldi kaustades paremaks haldamiseks.
-
-### Kodused Ülesanded
-- Sisaldab Python'i skripte mis vaja kodus teha
-
-### EsimeneProject
-- Sisaldab esimese 2 päeva Python'i skripte ja muid tunnis kasutusse läinud faile.
-
-### Objectid Project
-- Sisaldab Python'i skripte, mis on seotud objektide ja klasside loomisega Pythonis.
-
 > *<sup>Agu Toomas Pihelgas 2024</sup>*
 
 
