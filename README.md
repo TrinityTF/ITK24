@@ -9,10 +9,13 @@
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
   - 
 📂 Lisa kujund olemasolevale tööle
-- 📄 [`app.py`](pyÜlesanded/LKOT/app.py)
-- 📄 [`TaskGUI.py`](pyÜlesanded/LKOT/taskGUI.py)
-- 📄 [`Circle.py`](pyÜlesanded/LKOT/Circle.py)
-- 📄 [`Rectangle.py`](pyÜlesanded/LKOT/Rectangle.py)
+- 📄 [`app.py`](taskGui/app.py)
+- 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
+- 📄 [`Circle.py`](taskGui/Circle.py)
+- 📄 [`Rectangle.py`](taskGui/Rectangle.py)
+- 📄 [`Cone.py`](taskGui/Cone.py)
+- 📄 [`Cylinder.py`](taskGui/Cylinder.py)
+- 📄 [`Triangle.py`](taskGui/Triangle.py)
 
 
 </details>
