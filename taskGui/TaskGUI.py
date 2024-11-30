@@ -4,7 +4,7 @@ from tkinter.ttk import Combobox
 from Circle import Circle
 from Rectangle import Rectangle
 from Cone import Cone
-from Cyclinder import Cylinder
+from Cylinder import Cylinder
 from Triangle import Triangle
 
 class TaskGUI:
