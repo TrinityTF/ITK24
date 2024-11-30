@@ -18,18 +18,9 @@
 
 </details>
 
-<details>
-<summary>📂 [**Kujundite Lisamine Olemasolevale Tööle**](https://github.com/TrinityTF/ITK24/tree/TaskGui)</summary>
+#### 📂 Kujundite Lisamine Olemasolevale Tööle
+📂 [**TaskGui Branch**](https://github.com/TrinityTF/ITK24/tree/TaskGui)
 
-- 📄 [**app.py**](taskGui/app.py)  
-- 📄 [**TaskGUI.py**](taskGui/TaskGUI.py)  
-- 📄 [**Circle.py**](taskGui/Circle.py)  
-- 📄 [**Rectangle.py**](taskGui/Rectangle.py)  
-- 📄 [**Cone.py**](taskGui/Cone.py)  
-- 📄 [**Cylinder.py**](taskGui/Cylinder.py)  
-- 📄 [**Triangle.py**](taskGui/Triangle.py)
-
-</details>
 
 ---
 
