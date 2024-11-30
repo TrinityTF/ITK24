@@ -19,8 +19,10 @@
 </details>
 
 <details>
-<summary>📂 Kujundite Lisamine Olemasolevale Tööle</summary>
-📂 [***TaskGui Branch***](https://github.com/TrinityTF/ITK24/tree/TaskGui)
+<summary>📂 Kujundite Lisamine Olemasolevale Tööle </summary>
+
+📂 [**TaskGui Branch**](https://github.com/TrinityTF/ITK24/tree/TaskGui)  
+
 </details>
 
 ---
