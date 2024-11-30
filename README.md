@@ -105,6 +105,6 @@
 - 📄 [`gitignore`](.gitignore)
 
 </details>
- *<sup>Agu Toomas Pihelgas 2024</sup>*
+ <sup>Agu Toomas Pihelgas 2024</sup>
 
 
