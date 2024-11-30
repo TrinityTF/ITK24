@@ -5,7 +5,7 @@
 - 📄 [**Circle.py**](taskGui/Circle.py)  
 - 📄 [**Rectangle.py**](taskGui/Rectangle.py)  
 - 📄 [**Cone.py**](taskGui/Cone.py)  
-- 📄 [**Cylinder.py**](taskGui/Cylinder.py)  
+- 📄 [**Cylinder.py**](taskGui/Cyclinder.py)  
 - 📄 [**Triangle.py**](taskGui/Triangle.py)
 
 ### [**Tagasi main branchi**](https://github.com/TrinityTF/ITK24/tree/main)
