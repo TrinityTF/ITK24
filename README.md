@@ -12,7 +12,7 @@
   - 📄 [`result.txt`](pyÜlesanded/result.txt)
 </details>
 <details>
-<summary>📂 Lisa kujund olemasolevale tööle</summary>
+<summary>📂 Kujundite Lisamine Olemasolevasse Tõõle</summary>
 
 - 📄 [`app.py`](taskGui/app.py)
 - 📄 [`TaskGUI.py`](taskGui/taskGUI.py)
@@ -22,7 +22,7 @@
 - 📄 [`Cylinder.py`](taskGui/Cylinder.py)
 - 📄 [`Triangle.py`](taskGui/Triangle.py)
 </details>
-
+### 📂 Tunnis Tehtud Pythoni Projectid
 <details>
 <summary>📂 EsimeneProject</summary>
 
