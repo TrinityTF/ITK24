@@ -22,7 +22,7 @@
 - 📄 [`Cylinder.py`](taskGui/Cylinder.py)
 - 📄 [`Triangle.py`](taskGui/Triangle.py)
 </details>
-### 📂 Tunnis Tehtud Pythoni Projectid
+## 📂 Tunnis Tehtud Pythoni Projectid
 <details>
 <summary>📂 EsimeneProject</summary>
 
