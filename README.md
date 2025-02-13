@@ -105,6 +105,16 @@
 </details>
 
 <details>
+<summary>📂 Powershell</summary>
+
+- 📄 [**Game.ps1**](skriptid/Game.ps1)  
+- 📄 [**esimene.ps1**](skriptid/esimene.ps1)  
+- 📄 [**funktsioonid.ps1**](skriptid/funksioonid.ps1)  
+- 📄 [**Listid**](skriptid/listid.ps1)
+
+</details>
+
+<details>
 <summary>📂 Muud Failid</summary>
 
 - 📄 [**LICENSE**](LICENSE)  
