@@ -109,7 +109,7 @@
 
 - 📄 [**Game.ps1**](skriptid/Game.ps1)  
 - 📄 [**esimene.ps1**](skriptid/esimene.ps1)  
-- 📄 [**funktsioonid.ps1**](skriptid/funksioonid.ps1)  
+- 📄 [**funktsioonid.ps1**](skriptid/funktsioonid.ps1)  
 - 📄 [**Listid**](skriptid/listid.ps1)
 
 </details>
