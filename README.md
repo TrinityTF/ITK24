@@ -126,6 +126,16 @@
 - 📄 [**Terminali Ajalugu**](Skriptid/terminal_history.txt)
 - 📄 [**Kõik Commandid**](Skriptid/all_commands.txt)
 - 📄 [**Kasutaja Lisamine/Muutmine/Eemaldamine**](Skriptid/kasutaja_lisamine.txt)
+
+<summary>Task1</summary>
+
+- 📄 [**Eesnimed.txt**](task1/Eesnimed.txt)
+- 📄 [**Kirjeldused.txt**](task1/Kirjeldused.txt)
+- 📄 [**Perenimed.txt**](task1/Perenimed.txt)
+- 📄 [**Ülesanne_LocalUser.txt**](task1/Ülesanne_LocalUser.txt)
+- 📄 [**new_users-accounts.csv**](task1/new_users-accounts.csv)
+- 📄 [**task1.ps1**](task1/task1.ps1)
+- 📄 [**task2.ps1**](task1/task2.ps1)
 </details>
 
 <details>
