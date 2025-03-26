@@ -111,7 +111,12 @@
 - 📄 [**esimene.ps1**](Skriptid/esimene.ps1)  
 - 📄 [**funktsioonid.ps1**](Skriptid/funktsioonid.ps1)  
 - 📄 [**Listid**](Skriptid/listid.ps1)
-
+- 📄 [**Create-MyCSV-s.csv**](Skriptid/Create-MyCSV-s.csv)
+- 📄 [**Create-MyCSV-v.csv**](Skriptid/Create-MyCSV-v.csv)
+- 📄 [**Persons.csv**](Skriptid/Persons.csv)
+- 📄 [**read-csv.ps1**](Skriptid/read-csv.ps1)
+- 📄 [**read-person-v1.ps1**](Skriptid/read-person-v1.ps1)
+- 📄 [**read-person-v2.ps1**](Skriptid/read-person-v2.ps1)
 </details>
 
 <details>
