@@ -121,6 +121,7 @@
 - 📄 [**read-person-v1.ps1**](Skriptid/read-person-v1.ps1)
 - 📄 [**read-person-v2.ps1**](Skriptid/read-person-v2.ps1)
 - 📄 [**read-person-v3.ps1**](Skriptid/read-person-v3.ps1)
+- 📄 [**terminal_history.txt**](Skriptid/terminal_history.txt)
 </details>
 
 <details>
