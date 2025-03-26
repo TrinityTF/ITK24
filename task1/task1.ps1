@@ -3,11 +3,24 @@ $firstNames = Get-Content -Path "Eesnimed.txt"
 $lastNames = Get-Content -Path "Perenimed.txt"
 $descriptions = Get-Content -Path "kirjeldused.txt"
 
+function Remove-Diacritics {
+    param ([String]$src = [String]::Empty)
+    $normalized = $src.Normalize( [Text.NormalizationForm]::FormD )
+    $sb = new-object Text.StringBuilder
+    $normalized.ToCharArray() | ForEach-Object { 
+        if ( [Globalization.CharUnicodeInfo]::GetUnicodeCategory($_) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+            [void]$sb.Append($_)
+        }
+    }
+    $sb.ToString()
+}
+
 # Funktsioon kasutajanime loomiseks
 function New-Username($firstName, $lastName) {
     $firstName = $firstName -replace '[ \-]', '' | Out-String
     $lastName = $lastName -replace '[ \-]', '' | Out-String
     $username = "$($firstName.Trim()).$($lastName.Trim())".ToLower()
+    $username = Remove-Diacritics -src $username.ToLower() # Eemaldame rõhumärgid
     return $username
 }
 

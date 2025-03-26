@@ -8,7 +8,6 @@ function Add-AllUsers {
     foreach ($user in $users) {
         $result = [PSCustomObject]@{
             Kasutajanimi = $user.Kasutajanimi
-            Parool       = $user.Parool
             Põhjus       = ""
             Edukas       = $false
         }
@@ -52,43 +51,78 @@ function Add-AllUsers {
             $adsiUser.PasswordExpired = 1
             $adsiUser.SetInfo()
 
-            $result.Edekas = $true
+            $result.Edukas = $true
             $results += $result
         }
         catch {
-            
+            $result.Põhjus = $_.Exception.Message
+            $results += $result
         }
     }
 
-    # Näita tulemusi
+    # Näita ainult lisatud tulemusi
     Clear-Host
     Write-Host "`nLisamise tulemused:" -ForegroundColor Cyan
-    $results | Format-Table -AutoSize
-    
-    Write-Host "`nSüsteemis olevad kasutajad:" -ForegroundColor Cyan
-    Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
+    $results | Format-Table -AutoSize -Property Kasutajanimi, Edukas, Põhjus
+
+    # Show Users group members
+    Write-Host "`nKasutajad Users grupis:" -ForegroundColor Cyan
+    Get-LocalGroupMember -Group "Users" | 
+        Where-Object { $_.ObjectClass -eq "User" } | 
+        ForEach-Object { Get-LocalUser -Name $_.Name.Split('\')[-1] } | 
+        Select-Object Name, Enabled, Description | 
+        Format-Table -AutoSize
 }
 
 # Funktsioon kasutaja kustutamiseks
 function Remove-SingleUser {
     Clear-Host
-    $existingUsers = Get-LocalUser | Select-Object -ExpandProperty Name
+    # Get only users that are members of the Users group
+    $userList = @(Get-LocalGroupMember -Group "Users" | 
+        Where-Object { $_.ObjectClass -eq "User" } | 
+        ForEach-Object { Get-LocalUser -Name $_.Name.Split('\')[-1] } | 
+        Select-Object Name, Enabled, Description)
     
-    Write-Host "Olemasolevad kasutajad:" -ForegroundColor Cyan
-    $existingUsers | ForEach-Object { Write-Host "- $_" }
+    if ($userList.Count -eq 0) {
+        Write-Host "Süsteemis pole ühtegi kasutajat Users grupis!" -ForegroundColor Yellow
+        return
+    }
+
+    Write-Host "Olemasolevad kasutajad Users grupis:" -ForegroundColor Cyan
+    for ($i = 0; $i -lt $userList.Count; $i++) {
+        Write-Host "$($i+1). $($userList[$i].Name)"
+    }
     
-    $deleteUser = Read-Host "`nSisesta kustutatava kasutaja nimi"
+    $choice = Read-Host "`nSisesta kustutatava kasutaja number (1-$($userList.Count))"
     
-    if ($existingUsers -contains $deleteUser) {
+    if (-not ($choice -match '^\d+$')) {
+        Write-Host "Vigane sisend! Palun sisesta number." -ForegroundColor Red
+        return
+    }
+    
+    $index = [int]$choice - 1
+    if ($index -lt 0 -or $index -ge $userList.Count) {
+        Write-Host "Vigane number! Palun vali 1-$($userList.Count)." -ForegroundColor Red
+        return
+    }
+    
+    $deleteUser = $userList[$index].Name
+    
+    try {
         Remove-LocalUser -Name $deleteUser
         Write-Host "Kasutaja $deleteUser kustutatud!" -ForegroundColor Green
+        
+        # Show updated list of Users group members
+        Write-Host "`nUuendatud kasutajate nimekiri:" -ForegroundColor Cyan
+        Get-LocalGroupMember -Group "Users" | 
+            Where-Object { $_.ObjectClass -eq "User" } | 
+            ForEach-Object { Get-LocalUser -Name $_.Name.Split('\')[-1] } | 
+            Select-Object Name, Enabled, Description | 
+            Format-Table -AutoSize
     }
-    else {
-        Write-Host "Kasutajat $deleteUser ei leitud!" -ForegroundColor Red
+    catch {
+        Write-Host "Viga kasutaja $deleteUser kustutamisel: $_" -ForegroundColor Red
     }
-    
-    Write-Host "`nUuendatud kasutajate nimekiri:" -ForegroundColor Cyan
-    Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
 }
 
 # Peamenüü
