@@ -8,8 +8,9 @@ function Add-AllUsers {
     foreach ($user in $users) {
         $result = [PSCustomObject]@{
             Kasutajanimi = $user.Kasutajanimi
-            Põhjus        = ""
-            Edukas        = $false
+            Parool       = $user.Parool
+            Põhjus       = ""
+            Edukas       = $false
         }
 
         # Kontrolli kasutaja olemasolu
@@ -30,7 +31,6 @@ function Add-AllUsers {
         try {
             $password = ConvertTo-SecureString $user.Parool -AsPlainText -Force
             
-            # Truncate description if needed
             $description = if ($user.Kirjeldus.Length -gt 48) {
                 $user.Kirjeldus.Substring(0,45) + "..."
             } else {
@@ -69,7 +69,7 @@ function Add-AllUsers {
     Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
 }
 
-# Funktsioon kasutaja kustutamiseks (sama jääb)
+# Funktsioon kasutaja kustutamiseks
 function Remove-SingleUser {
     Clear-Host
     $existingUsers = Get-LocalUser | Select-Object -ExpandProperty Name
@@ -91,7 +91,7 @@ function Remove-SingleUser {
     Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
 }
 
-# Peamenüü (sama jääb)
+# Peamenüü
 function Show-Menu {
     Clear-Host
     Write-Host "`nVali tegevus:`n" -ForegroundColor Cyan
