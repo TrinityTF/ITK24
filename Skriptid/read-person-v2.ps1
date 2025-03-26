@@ -6,16 +6,31 @@ $domeen = "@singedhaircut.gg" # Domeen
 $header = "Eesnimi;Perenimi;Sünniaeg;Kasutajanimi;E-Mail" # Uus faili päis
 $lineNr = 0
 
+# Rõhumärkide eemaldamise funktsioon
+function Remove-Diacritics {
+    param ([String]$src = [String]::Empty)
+    $normalized = $src.Normalize( [Text.NormalizationForm]::FormD )
+    $sb = new-object Text.StringBuilder
+    $normalized.ToCharArray() | ForEach-Object { 
+        if ( [Globalization.CharUnicodeInfo]::GetUnicodeCategory($_) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
+            [void]$sb.Append($_)
+        }
+    }
+    $sb.ToString()
+}
+
 # Kontrollime, kas uus fail on olemas, kui on, siis eemalda
 if (Test-Path $dst) {
     Remove-Item -Path $dst
-    #Write-Host "Eemaldatud vana fail!"
+    Write-Host "Eemaldatud vana fail!"
 } 
 
 Out-File -FilePath $dst -Append -InputObject $header # Lisame päise
+Write-Host "Lisatud päis uude faili."
 
 # Loeme faili sisu massiivi
 $contents = Get-Content $src -Encoding "UTF8"
+Write-Host "Loetud algfaili sisu."
 
 # Käime masiivi contents rea kaupa läbi.
 for ($x = 1; $x -lt $contents.Length; $x++) {
@@ -45,20 +60,7 @@ for ($x = 1; $x -lt $contents.Length; $x++) {
 
     # Lisame rea uude faili
     Out-File -FilePath $dst -Append -InputObject $newLine
-
+    Write-Host "Lisatud rida $lineNr : $newLine"
 }
 
-# Rõhumärkide eemaldamise funktsioon
-function Remove-Diacritics {
-    param ([String]$src = [String]::Empty)
-    $normalized = $src.Normalize( [Text.NormalizationForm]::FormD )
-    $sb = new-object Text.StringBuilder
-    $normalized.ToCharArray() | ForEach-Object { 
-        if ( [Globalization.CharUnicodeInfo]::GetUnicodeCategory($_) -ne [Globalization.UnicodeCategory]::NonSpacingMark) {
-            [void]$sb.Append($_)
-        }
-    }
-    $sb.ToString()
-}
-
-# 
+Write-Host "Faili töötlemine lõpetatud."
