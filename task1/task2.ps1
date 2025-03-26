@@ -21,7 +21,7 @@ function Add-LocalUserAccount($user) {
     
     try {
         $password = ConvertTo-SecureString $user.Parool -AsPlainText -Force
-        New-LocalUser -Name $user.Kasutajanimi -Password $password -Description $user.Kirjeldus -UserMayChangePassword $true -PasswordNeverExpires $false
+        New-LocalUser -Name $user.Kasutajanimi -Password $password -Description $user.Kirjeldus -UserMayChangePassword $true -PasswordNeverExpires $false -FullName "$($user.Eesnimi) $($user.Perenimi)"
         Add-LocalGroupMember -Group "Users" -Member $user.Kasutajanimi
         # Määra parool aeguma
         Set-LocalUser -Name $user.Kasutajanimi -PasswordExpires $true

@@ -29,3 +29,5 @@ Kirjeldus on liiga pikk
 Kasutaja tuleb lisada Users gruppi
 Lõpus näita millised kasutajad on süsteemis
 Määra et esmakordsel sisselogimisel peab kasutaja parooli muutma
+Kui kasutajat ei saa lisada, siis ütle nimi ja võimalusel põhjus (duplikaat, pikk nimi, lühendatud kirjeldus)
+Kasutaja täisnimi on Eesnimi Perenimi
