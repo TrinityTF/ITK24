@@ -109,8 +109,16 @@ function Remove-SingleUser {
     $deleteUser = $userList[$index].Name
     
     try {
+        # Remove user account
         Remove-LocalUser -Name $deleteUser
         Write-Host "Kasutaja $deleteUser kustutatud!" -ForegroundColor Green
+
+        # Remove user profile folder
+        $userProfilePath = "C:\Users\$deleteUser"
+        if (Test-Path $userProfilePath) {
+            Remove-Item -Path $userProfilePath -Force -Recurse -ErrorAction Stop
+            Write-Host "Kasutaja profiili kaust kustutatud: $userProfilePath" -ForegroundColor Green
+        }
         
         # Show updated list of Users group members
         Write-Host "`nUuendatud kasutajate nimekiri:" -ForegroundColor Cyan
@@ -121,7 +129,7 @@ function Remove-SingleUser {
             Format-Table -AutoSize
     }
     catch {
-        Write-Host "Viga kasutaja $deleteUser kustutamisel: $_" -ForegroundColor Red
+        Write-Host "Viga toimingu teostamisel: $_" -ForegroundColor Red
     }
 }
 
