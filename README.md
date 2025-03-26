@@ -114,9 +114,13 @@
 - 📄 [**Create-MyCSV-s.csv**](Skriptid/Create-MyCSV-s.csv)
 - 📄 [**Create-MyCSV-v.csv**](Skriptid/Create-MyCSV-v.csv)
 - 📄 [**Persons.csv**](Skriptid/Persons.csv)
+- 📄 [**Persons-v1.csv**](Skriptid/Persons.csv)
+- 📄 [**Persons-v2.csv**](Skriptid/Persons.csv)
+- 📄 [**Persons-v3.csv**](Skriptid/Persons.csv)
 - 📄 [**read-csv.ps1**](Skriptid/read-csv.ps1)
 - 📄 [**read-person-v1.ps1**](Skriptid/read-person-v1.ps1)
 - 📄 [**read-person-v2.ps1**](Skriptid/read-person-v2.ps1)
+- 📄 [**read-person-v3.ps1**](Skriptid/read-person-v3.ps1)
 </details>
 
 <details>
