@@ -1,0 +1,31 @@
+Ülesanne on mitme osaline. Ärge üritage kõike kohe korraga kokku panna, siis läheb asi käest ära.
+
+Teile on jagatud kolm tekstifaili, kus nimi ütleb, mida see sisaldab. Vaata julgelt faili sisu, aga ära muuda. Esmalt on tarvis luua uus fail mis sisaldab lokaalseid kasutajaid. Õppimise eesmärgil tuleb see info ise kokku miksida etteantud failidest. See fail mida teie esimene skript looma hakkab on vaja järgmise skirpti jaoks.
+
+Esimene skript tavakasutaja õigused
+---- ==== ----
+
+See peab looma csv faili (new_users_accounts.csv) millel on järgmine kuju:
+Eesnimi;Perenimi;Kasutajanimi;Parool;Kirjeldus
+
+Näiteks:
+Eesnimi;Perenimi;Kasutajanimi;Parool;Kirjeldus
+Nadežda;Männik;nadezda.mannik;sdf23as;Loob ja arendab tarkvara, tegeleb süsteemi arendusprojketidega.
+
+Sellesse faili tuleb luua 5 juhuslikku kasutajat. See tähendab et iga isiku loomiseks tuleb võtta vastavast failist juhuslik eesnimi, juhuslik perenimi ja juhuslik kirjeledus. Siis tuleb genereerida parool juhuslik pikkusega 5-8 märki või kasutada staatilist parooli ning luua kasutajanimi eesnimi.perenimi, kus eesnimes ja perenimes olev tühik ja/või sidekriips on vaja eemaldada. Rõhumärgid asendada ja kõik on väiksed tähed.
+
+Failil peab olema päis.
+Igal käivitamisel kirjutatakse fail üle
+Konsooli näitab info millised kasutajad mis infoga fail kirjutati (kogu info)
+
+Teine skript administraatori õigused
+------ ====== ------
+Teine skript loeb nüüd esimese skripti tulemust (new_users_accounts.csv) ning küsib mida sa teha soovid. Valikus on kaks tegevust. Lisada kõik kasutajad süsteemi või tuua ette nimekiri milline kasutaja kustutada. Kustutada saab ainult ühe ja peale kustutamist läheb skriptist välja. Sama on ka lisamisega, et lisab ja skript lõpetab töö. Üks tegevus korraga. 
+Lisamisel on mõned asjad mida on vaja arvestada:
+
+Kasutaja võib olla juba olemas (kasutajanimi)
+Kasutajanimi on liiga pikk
+Kirjeldus on liiga pikk
+Kasutaja tuleb lisada Users gruppi
+Lõpus näita millised kasutajad on süsteemis
+Määra et esmakordsel sisselogimisel peab kasutaja parooli muutma
