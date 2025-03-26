@@ -1,75 +1,123 @@
 # Loeb CSV faili
 $users = Import-Csv -Path "new_users_accounts.csv" -Delimiter ";"
 
-# Funktsioon kasutaja lisamiseks
-function Add-LocalUserAccount($user) {
-    $existingUser = Get-LocalUser -Name $user.Kasutajanimi -ErrorAction SilentlyContinue
-    if ($existingUser) {
-        Write-Host "Kasutaja $($user.Kasutajanimi) on juba olemas!" -ForegroundColor Yellow
-        return
-    }
+# Funktsioon kasutajate lisamiseks
+function Add-AllUsers {
+    $results = @()
     
-    if ($user.Kasutajanimi.Length -gt 20) {
-        Write-Host "Kasutajanimi $($user.Kasutajanimi) on liiga pikk!" -ForegroundColor Red
-        return
+    foreach ($user in $users) {
+        $result = [PSCustomObject]@{
+            Kasutajanimi = $user.Kasutajanimi
+            Põhjus        = ""
+            Edukas        = $false
+        }
+
+        # Kontrolli kasutaja olemasolu
+        if (Get-LocalUser -Name $user.Kasutajanimi -ErrorAction SilentlyContinue) {
+            $result.Põhjus = "Kasutaja on juba olemas"
+            $results += $result
+            continue
+        }
+
+        # Kontrolli kasutajanime pikkust
+        if ($user.Kasutajanimi.Length -gt 20) {
+            $result.Põhjus = "Kasutajanimi liiga pikk (max 20 tähemärki)"
+            $results += $result
+            continue
+        }
+
+        # Proovi kasutajat luua
+        try {
+            $password = ConvertTo-SecureString $user.Parool -AsPlainText -Force
+            
+            # Truncate description if needed
+            $description = if ($user.Kirjeldus.Length -gt 48) {
+                $user.Kirjeldus.Substring(0,45) + "..."
+            } else {
+                $user.Kirjeldus
+            }
+
+            $newUserParams = @{
+                Name        = $user.Kasutajanimi
+                FullName    = "$($user.Eesnimi) $($user.Perenimi)"
+                Password    = $password
+                Description = $description
+            }
+            
+            $null = New-LocalUser @newUserParams
+            Add-LocalGroupMember -Group "Users" -Member $user.Kasutajanimi
+            
+            # Määra parooli aegumine
+            $adsiUser = [ADSI]"WinNT://$env:COMPUTERNAME/$($user.Kasutajanimi)"
+            $adsiUser.PasswordExpired = 1
+            $adsiUser.SetInfo()
+
+            $result.Edekas = $true
+            $results += $result
+        }
+        catch {
+            
+        }
     }
+
+    # Näita tulemusi
+    Clear-Host
+    Write-Host "`nLisamise tulemused:" -ForegroundColor Cyan
+    $results | Format-Table -AutoSize
     
-    if ($user.Kirjeldus.Length -gt 48) {
-        Write-Host "Kasutaja $($user.Kasutajanimi) kirjeldus on liiga pikk!" -ForegroundColor Red
-        return
-    }
-    
-    try {
-        $password = ConvertTo-SecureString $user.Parool -AsPlainText -Force
-        New-LocalUser -Name $user.Kasutajanimi -Password $password -Description $user.Kirjeldus -UserMayChangePassword $true -PasswordNeverExpires $false -FullName "$($user.Eesnimi) $($user.Perenimi)"
-        Add-LocalGroupMember -Group "Users" -Member $user.Kasutajanimi
-        # Määra parool aeguma
-        Set-LocalUser -Name $user.Kasutajanimi -PasswordExpires $true
-        # Sunni parooli muutmine järgmisel sisselogimisel
-        Set-LocalUser -Name $user.Kasutajanimi -PasswordNeverExpires $false
-        $account = [ADSI]"WinNT://$env:COMPUTERNAME/$($user.Kasutajanimi)"
-        $account.PasswordExpired = 1
-        $account.SetInfo()
-        Write-Host "Kasutaja $($user.Kasutajanimi) lisatud süsteemi!" -ForegroundColor Green
-    }
-    catch {
-        Write-Host "Viga kasutaja $($user.Kasutajanimi) lisamisel: $($_.Exception.Message)" -ForegroundColor Red
-    }
+    Write-Host "`nSüsteemis olevad kasutajad:" -ForegroundColor Cyan
+    Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
 }
 
-# Funktsioon kasutaja kustutamiseks
-function Remove-LocalUserAccount() {
+# Funktsioon kasutaja kustutamiseks (sama jääb)
+function Remove-SingleUser {
+    Clear-Host
     $existingUsers = Get-LocalUser | Select-Object -ExpandProperty Name
-    Write-Host "Olemasolevad kasutajad:" -ForegroundColor Cyan
-    $existingUsers | ForEach-Object { Write-Host $_ }
     
-    $deleteUser = Read-Host "Sisesta kustutatava kasutaja nimi"
+    Write-Host "Olemasolevad kasutajad:" -ForegroundColor Cyan
+    $existingUsers | ForEach-Object { Write-Host "- $_" }
+    
+    $deleteUser = Read-Host "`nSisesta kustutatava kasutaja nimi"
     
     if ($existingUsers -contains $deleteUser) {
         Remove-LocalUser -Name $deleteUser
         Write-Host "Kasutaja $deleteUser kustutatud!" -ForegroundColor Green
-    } else {
+    }
+    else {
         Write-Host "Kasutajat $deleteUser ei leitud!" -ForegroundColor Red
     }
+    
+    Write-Host "`nUuendatud kasutajate nimekiri:" -ForegroundColor Cyan
+    Get-LocalUser | Select-Object Name, Enabled, Description | Format-Table -AutoSize
 }
 
-# Peamenüü
-Write-Host "Vali tegevus:" -ForegroundColor Cyan
-Write-Host "1. Lisa kõik kasutajad süsteemi"
-Write-Host "2. Kustuta kasutaja"
+# Peamenüü (sama jääb)
+function Show-Menu {
+    Clear-Host
+    Write-Host "`nVali tegevus:`n" -ForegroundColor Cyan
+    Write-Host "1. Lisa kõik kasutajad süsteemi"
+    Write-Host "2. Kustuta kasutaja"
+    Write-Host "3. Välju`n"
+}
 
-$choice = Read-Host "Sisesta valik (1 või 2)"
-
-if ($choice -eq "1") {
-    foreach ($user in $users) {
-        Add-LocalUserAccount -user $user
+do {
+    Show-Menu
+    $choice = Read-Host "Sisesta valik (1-3)"
+    
+    switch ($choice) {
+        '1' {
+            Add-AllUsers
+            exit
+        }
+        '2' {
+            Remove-SingleUser
+            exit
+        }
+        '3' { exit }
+        default {
+            Write-Host "Vale valik! Proovi uuesti." -ForegroundColor Red
+            Start-Sleep -Seconds 2
+        }
     }
-} elseif ($choice -eq "2") {
-    Remove-LocalUserAccount
-} else {
-    Write-Host "Vale valik!" -ForegroundColor Red
 }
-
-# Kuvab kõik süsteemi kasutajad
-Write-Host "Süsteemi kasutajad:" -ForegroundColor Cyan
-Get-LocalUser | Select-Object Name, Description | Format-Table -AutoSize
+while ($true)
