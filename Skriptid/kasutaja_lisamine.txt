@@ -1,0 +1,18 @@
+cd C:\Users\Agu\Documents\PythonApps\ITK24\Skriptid
+
+Get-LocalUser
+
+New-LocalUser -Name "kasutaja" -Password (ConvertTo-SecureString "kasutaja123" -AsPlainText -Force) -FullName "Kasutaja kasutaja123" -Description "Test kasutaja"
+
+Set-LocalUser -Name "kasutaja" -FullName "Uus Täisnimi"
+
+Disable-LocalUser -Name "kasutaja"
+
+Enable-LocalUser -Name "kasutaja"
+
+Add-LocalGroupMember -Group "Administrators" -Member "kasutaja"
+
+Get-LocalGroup
+Remove-LocalUser -Name "kasutaja"
+
+history

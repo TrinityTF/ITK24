@@ -121,8 +121,11 @@
 - 📄 [**read-person-v1.ps1**](Skriptid/read-person-v1.ps1)
 - 📄 [**read-person-v2.ps1**](Skriptid/read-person-v2.ps1)
 - 📄 [**read-person-v3.ps1**](Skriptid/read-person-v3.ps1)
-- 📄 [**terminal_history.txt**](Skriptid/terminal_history.txt)
-- 📄 [**all_commands.txt**](Skriptid/all_commands.txt)
+<summary>Konsooli käsud</summary>
+
+- 📄 [**Terminali Ajalugu**](Skriptid/terminal_history.txt)
+- 📄 [**Kõik Commandid**](Skriptid/all_commands.txt)
+- 📄 [**Kasutaja Lisamine/Muutmine/Eemaldamine**](Skriptid/kasutaja_lisamine.txt)
 </details>
 
 <details>
