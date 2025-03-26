@@ -107,10 +107,10 @@
 <details>
 <summary>📂 Powershell</summary>
 
-- 📄 [**Game.ps1**](skriptid/Game.ps1)  
-- 📄 [**esimene.ps1**](skriptid/esimene.ps1)  
-- 📄 [**funktsioonid.ps1**](skriptid/funktsioonid.ps1)  
-- 📄 [**Listid**](skriptid/listid.ps1)
+- 📄 [**Game.ps1**](Skriptid/Game.ps1)  
+- 📄 [**esimene.ps1**](Skriptid/esimene.ps1)  
+- 📄 [**funktsioonid.ps1**](Skriptid/funktsioonid.ps1)  
+- 📄 [**Listid**](Skriptid/listid.ps1)
 
 </details>
 
