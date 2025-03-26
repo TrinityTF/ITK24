@@ -1,0 +1,85 @@
+run countDown.py
+ countDown.py
+/countDown.py
+ countDown.py
+5*5
+countdown.py
+python countdown.py
+cd EsimneProject
+python countdown.py
+ countdown.py
+name = agu
+time.py
+python time.py
+python kooliTimer.py
+irm https://get.activated.win | iex
+wsl.ee gimp
+172.19.48.1
+ssh ubuntuAgu
+py .\app.py
+ls
+py -v
+py --version
+git config --global user.email "agutoomasp@gmail.com"
+git config --global user.name "TrinityTF"
+git remote add origin https://github.com/TrinityTF/Isikud.git
+git branch -M main
+git push -u origin main
+git remote add origin https://github.com/TrinityTF/Isikud.git
+git push -u origin main
+git branch -M main
+git push -u origin main
+git remote add origin https://github.com/TrinityTF/Isikud.git
+git push -u origin main
+clear
+cd pythonapps
+cd ..
+git clone https://github.com/TrinityTF/ITK24.git
+$PSVersionTable.PSVersion
+cd .\Documents\PythonApps\ITK24\Skriptid\
+ls
+clear
+Get-Content .\Persons.csv
+clc
+clear
+Get-Content .\Persons.csv | Where-Object  { $_ -like "marko*"}
+Get-Content .\Persons.csv | Where-Object  { $_ -like "marko*"} | Set-Content markod.csv
+history
+Get-Content .\Persons.csv | Where-Object  { $_ -like "marko*"} | Set-Content markod.csv C:\Users\Agu\Documents\
+Get-Content .\Persons.csv | Where-Object  { $_ -like "marko*"} | Set-Content markod.csv "C:\Users\Agu\Documents\"
+Get-Content .\Persons.csv | Where-Object  { $_ -like "marko*"} | Set-Content markod.csv "C:\Users\Agu\Documents"
+clear
+Import-Csv .\Persons.csv -Delimiter ";"
+Import-Csv .\Persons.csv -Delimiter ";" | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Format-Table | Select-Object -first 10
+Import-Csv .\Persons.csv -Delimiter ";" | Format-Table | Select-Object {$_.Eesnimi -eq "Marko"}
+clear
+Import-Csv .\Persons.csv -Delimiter ";" | Select-Object {$_.Eesnimi -eq "Marko"} | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -eq "Marko"} | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Marko*"} | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Format-Table
+clear
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi. Sünniaeg | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi, Sünniaeg | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) }
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Export-Csv Markod_csv.csv -Delimiter ";" -NoTypeInformation
+clear
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Mark*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | ConvertTo-Csv Markod_csv.csv -Delimiter ";" -NoTypeInformation
+clear
+Get-Process 
+clear
+Get-Process | Where-Object {$_.Name -like "visual*"}
+Get-Process | Where-Object {$_.Name -like "chrome"}
+Get-Process | Where-Object {$_.Name -like "chrome*"}
+clear
+Get-Process | Group-Object Name | Sort-Object Count -Descending | Format-Table Name, Count
+Get-Process | Group-Object Name | Sort-Object Count -Descending | Format-Table Name, Count -AutoSize
+Get-Process | Group-Object Name | Where-Object { $_.Count -gt 2} | Sort-Object Count -Descending | Format-Table Name, Count -AutoSize
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Agu*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Eesnimi -like "Toomas*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Perenimi -like "Pihelgas*"} | Select-Object Eesnimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Format-Table
+Import-Csv .\Persons.csv -Delimiter ";" | Where-Object {$_.Perenimi -like "Pihelgas*"} | Select-Object Eesnimi, Perenimi, Sünniaeg | Sort-Object { [datetime]::ParseExact($_.Sünniaeg, "dd.MM.yyyy", $null) } | Format-Table
+history
+Get-History | ForEach-Object CommandLine | Out-File terminal_history.txt -Encoding utf8
+Get-Content (Get-PSReadLineOption).HistorySavePath | Out-File -FilePath all_commands.txt -Encoding utf8
