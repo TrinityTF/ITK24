@@ -9,6 +9,7 @@ function Add-AllUsers {
         $result = [PSCustomObject]@{
             Kasutajanimi = $user.Kasutajanimi
             Põhjus       = ""
+            Parool       = $user.Parool
             Edukas       = $false
         }
 
@@ -63,7 +64,7 @@ function Add-AllUsers {
     # Näita ainult lisatud tulemusi
     Clear-Host
     Write-Host "`nLisamise tulemused:" -ForegroundColor Cyan
-    $results | Format-Table -AutoSize -Property Kasutajanimi, Edukas, Põhjus
+    $results | Format-Table -AutoSize -Property Kasutajanimi, Parool, Edukas, Põhjus
 
     # Show Users group members
     Write-Host "`nKasutajad Users grupis:" -ForegroundColor Cyan
@@ -109,14 +110,14 @@ function Remove-SingleUser {
     $deleteUser = $userList[$index].Name
     
     try {
-        # Remove user account
+        # First remove the user
         Remove-LocalUser -Name $deleteUser
         Write-Host "Kasutaja $deleteUser kustutatud!" -ForegroundColor Green
-
-        # Remove user profile folder
+        
+        # Then try to remove their profile folder
         $userProfilePath = "C:\Users\$deleteUser"
         if (Test-Path $userProfilePath) {
-            Remove-Item -Path $userProfilePath -Force -Recurse -ErrorAction Stop
+            Remove-Item -Path $userProfilePath -Force -Recurse
             Write-Host "Kasutaja profiili kaust kustutatud: $userProfilePath" -ForegroundColor Green
         }
         
@@ -129,7 +130,7 @@ function Remove-SingleUser {
             Format-Table -AutoSize
     }
     catch {
-        Write-Host "Viga toimingu teostamisel: $_" -ForegroundColor Red
+        Write-Host "Viga kasutaja $deleteUser kustutamisel: $_" -ForegroundColor Red
     }
 }
 
