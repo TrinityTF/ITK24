@@ -103,6 +103,8 @@
 - 📄 [**Rectangle.py**](taskGui/Rectangle.py)
 
 </details>
+
+<details>
 <summary>📂 Powershell</summary>
 
 - 📄 [**Game.ps1**](Skriptid/Game.ps1)  
