@@ -105,6 +105,14 @@
 </details>
 
 <details>
+<summary>📂 SimServerLog</summary>
+
+- 📄 [**sim_server_log.py**](SimServerLog/sim_server_log.py)  
+- 📄 [**README.md**](SimServerLog/README.md)  
+
+</details>
+
+<details>
 <summary>📂 Powershell</summary>
 
 - 📄 [**Game.ps1**](Skriptid/Game.ps1)  
