@@ -152,16 +152,14 @@
 
 ---
 
-## 📂 SimServerLog
 
-**SimServerLog** on serveri logide simulaator, mis genereerib juhuslikke logikirjeid ja logifailide rotatsiooni.  
-- 📁 [**SimServerLog**](SimServerLog/)  
-  - 📄 [**run_server.py**](SimServerLog/run_server.py) – logide genereerija  
-  - 📄 [**app.ps1**](SimServerLog/app.ps1) – logide analüüs PowerShellis  
-  - 📄 [**README.md**](SimServerLog/README.md) – kasutusjuhend ja täiendused
+<details>
+<summary>📂 SimServerLog</summary>
 
-Vaata SimServerLog kausta README-d detailsema info ja kasutusjuhiste jaoks.
+- 📄 [**run_server.py**](SimServerLog/run_server.py)  
+- 📄 [**app.ps1**](SimServerLog/app.ps1)  
+- 📄 [**README.md**](SimServerLog/README.md)  
 
----
+</details>
 
 <sup>**Agu Toomas Pihelgas 2025**</sup>
