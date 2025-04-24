@@ -103,11 +103,6 @@
 - 📄 [**Rectangle.py**](taskGui/Rectangle.py)
 
 </details>
-
-<details>
-
-
-<details>
 <summary>📂 Powershell</summary>
 
 - 📄 [**Game.ps1**](Skriptid/Game.ps1)  
@@ -139,12 +134,14 @@
 - 📄 [**new_users-accounts.csv**](task1/new_users-accounts.csv)
 - 📄 [**task1.ps1**](task1/task1.ps1)
 - 📄 [**task2.ps1**](task1/task2.ps1)
-
+</details>
+<details>
 <summary>📂 SimServerLog</summary>
 
 - 📄 [**run_server.py**](SimServerLog/run_server.py)  
 - 📄 [**app.ps1**](SimServerLog/app.ps1)  
 - 📄 [**README.md**](SimServerLog/README.md)  
+
 </details>
 
 <details>
