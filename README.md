@@ -1,4 +1,19 @@
 # **ITK 24 Programmeerimise Alused**
+### 📂 **Lõputõõ**
+
+<details>
+<summary>📂 Task09</summary>
+
+- 📄 [**Task09.py**](Task09/Task09.py)
+- 📄 [**Task09.ps1**](Task09/Task09.ps1)
+- 📄 [**Task09.txt**](Task09/Task09.txt)
+
+
+</details>
+
+<details>
+
+---
 
 ### 📂 **Kodused Ülesanded**
 

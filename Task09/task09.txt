@@ -1,0 +1,24 @@
+Leitud bot'id ja nende külastuste arv (dünaamiliselt eraldatud nimed):
+Bot             |   Num
+-----------------------
+AhrefsBot       | 47658
+ImagesiftBot    | 32433
+SemrushBot      | 28077
+crawler         | 19211
+DotBot          | 18989
+Googlebot       | 18936
+bingbot         |  9990
+GPTBot          |  3132
+Googlebot-Image |   740
+OAI-SearchBot   |   666
+Amazonbot       |   489
+bot             |   246
+ClaudeBot       |   186
+PetalBot        |    57
+YandexBot       |    22
+DuckDuckBot     |    18
+Xpanse-bot      |    12
+coccocbot-web   |     6
+PerplexityBot   |     3
+FAST-WebCrawler |     1
+Gaisbot         |     1
