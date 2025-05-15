@@ -11,8 +11,6 @@
 
 </details>
 
-<details>
-
 ---
 
 ### 📂 **Kodused Ülesanded**
